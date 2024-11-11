@@ -4,195 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ramon Ribeiro - Página de Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <style>
-        /* Estilos globais */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-h1, h2, h3 {
-    color: #ff0000;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-header {
-    background-color: #000;
-    color: #ff0000;
-    text-align: center;
-    padding: 20px;
-    border-bottom: 4px solid #ff0000;
-}
-
-header img {
-    border-radius: 50%;
-    width: 180px;
-    height: 180px;
-}
-
-/* Seção de biografia */
-.biography {
-    text-align: center;
-    margin: 30px 0;
-}
-
-/* Seção de discografia */
-.discography-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2em;
-}
-
-.discography a {
-    color: red;
-    text-decoration: none;
-}
-
-.discography a:hover {
-    text-decoration: underline;
-}
-
-.albums-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.album {
-    background-color: #1e1e1e;
-    padding: 15px;
-    width: 300px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s;
-    border: 2px solid #333;
-    text-align: center;
-}
-
-.album img {
-    width: 100%;
-    height: 200px; /* Define a altura para padronizar as imagens */
-    object-fit: cover; /* Garante que todas as imagens tenham o mesmo formato */
-    border-radius: 8px;
-}
-
-.album:hover {
-    transform: scale(1.05);
-    border-color: #ff0000;
-}
-
-/* Player de vídeo */
-.media, .tour-dates, .contact-form {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.player, .contact-form, .tour-dates li {
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 8px;
-    border: 2px solid #333;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-}
-
-.player {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.player:hover, .tour-dates li:hover, .album:hover {
-    transform: scale(1.05);
-    border-color: #ff0000;
-}
-
-.player video {
-    width: 100%;
-    height: 500px;
-    border-radius: 8px;
-}
-
-/* Formulário de contato */
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #555;
-    border-radius: 4px;
-    background-color: #333;
-    color: #e0e0e0;
-}
-
-.contact-form button {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #b30000;
-}
-
-/* Rodapé */
-footer {
-    background-color: #000;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    border-top: 4px solid #ff0000;
-}
-
-footer a, nav ul a {
-    color: #ff0000;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer a:hover, nav ul a:hover {
-    text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .albums-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .album {
-        width: 100%;
-    }
-}
-
-    </style>
 
     <!-- Cabeçalho -->
     <header>
         <img src="img/ss.jpeg" alt="Foto de perfil">
         <h1>Ramon Ribeiro</h1>
-        <p>Tecnologo em Analise e Desenvolvimento de Sistemas, Web Developer</p>
+        <p>Tecnólogo em Análise e Desenvolvimento de Sistemas, Web Developer</p>
         <nav>
             <ul>
-                <a href="#sobre">Sobre Mim</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#contato">Contato</a>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -214,14 +40,14 @@ footer a:hover, nav ul a:hover {
                     <h3>Todo List</h3>
                     <p>2024</p>
                     <p>Tecnologias: HTML/CSS, React.</p>
-                    <a href="https://github.com/RamonSRibeiro/todo-list-project">Clique aqui para acesar</a>
+                    <a href="https://github.com/RamonSRibeiro/todo-list-project">Clique aqui para acessar</a>
                 </div>
                 <div class="album">
                     <img src="img/projeto2.png" alt="Álbum 2">
                     <h3>Site de Perguntas e Respostas</h3>
                     <p>2024</p>
                     <p>Tecnologias: Ejs, Node.js, Express.js, Bootstrap 4.</p>
-                    <a href=""></a>
+                    <a href="#">Clique aqui para acessar</a>
                 </div>
                 <div class="album">
                     <img src="img/projeto1.png" alt="Álbum 3">
@@ -232,11 +58,19 @@ footer a:hover, nav ul a:hover {
                 </div>
             </div>
         </section>
+        
+        <!-- Modal de Confirmação -->
+        <div class="modal" id="confirmationModal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <p>Obrigado pela sua mensagem! Entraremos em contato em breve.</p>
+            </div>
+        </div>
 
         <!-- Formulário de Contato -->
         <section class="contact-form" id="contato">
             <h2>Contato</h2>
-            <form>
+            <form id="contactForm">
                 <input type="text" name="name" placeholder="Seu nome" required>
                 <input type="email" name="email" placeholder="Seu e-mail" required>
                 <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
@@ -254,5 +88,43 @@ footer a:hover, nav ul a:hover {
         <p>&copy; 2024 Ramon Ribeiro. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script>
+        // Selecionar o formulário, o modal e o botão de fechar
+        const form = document.getElementById('contactForm');
+        const modal = document.getElementById('confirmationModal');
+        const closeButton = document.querySelector('.close-button');
+
+        // Função para abrir o modal
+        function openModal() {
+            modal.style.display = 'flex';
+        }
+
+        // Função para fechar o modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Evento de envio do formulário
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impedir o envio do formulário
+
+            // Mostrar o modal
+            openModal();
+
+            // Limpar os campos do formulário
+            form.reset();
+        });
+
+        // Fechar o modal ao clicar no botão de fechar
+        closeButton.addEventListener('click', closeModal);
+
+        // Fechar o modal se clicar fora do conteúdo
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
