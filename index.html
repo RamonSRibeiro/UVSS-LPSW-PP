@@ -18,7 +18,8 @@
             <ul>
                 <li><a href="#sobre">Sobre Mim</a></li>
                 <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#certificados">Certificados</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
             </ul>
         </nav>
     </header>
@@ -31,100 +32,81 @@
                 Sou fluente em inglês, resultado de anos de estudo no CCAA. Minha formação inclui uma sólida base em lógica de programação, HTML5/CSS3 e uma compreensão geral de informática.</p>
         </section>
 
-        <!-- Discografia -->
+        <!-- Projetos -->
         <section class="discography" id="projetos">
             <h2 class="discography-title">Projetos</h2>
             <div class="albums-container">
                 <div class="album">
-                    <img src="img/projeto3.png" alt="Álbum 1">
+                    <img src="img/projeto3.png" alt="Projeto Todo List">
                     <h3>Todo List</h3>
                     <p>2024</p>
                     <p>Tecnologias: HTML/CSS, React.</p>
                     <a href="https://github.com/RamonSRibeiro/todo-list-project">Clique aqui para acessar</a>
                 </div>
                 <div class="album">
-                    <img src="img/projeto2.png" alt="Álbum 2">
+                    <img src="img/projeto2.png" alt="Projeto Perguntas e Respostas">
                     <h3>Site de Perguntas e Respostas</h3>
                     <p>2024</p>
                     <p>Tecnologias: Ejs, Node.js, Express.js, Bootstrap 4.</p>
                     <a href="#">Clique aqui para acessar</a>
                 </div>
                 <div class="album">
-                    <img src="img/projeto1.png" alt="Álbum 3">
+                    <img src="img/projeto1.png" alt="Projeto Calculadora">
                     <h3>Calculadora</h3>
                     <p>2023</p>
                     <p>Tecnologias: HTML/CSS, JS.</p>
-                    <a href="https://github.com/RamonSRibeiro/Calculadora">Clique Aqui para acessar</a>
+                    <a href="https://github.com/RamonSRibeiro/Calculadora">Clique aqui para acessar</a>
                 </div>
             </div>
         </section>
-        
-        <!-- Modal de Confirmação -->
-        <div class="modal" id="confirmationModal" style="display: none;">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <p>Obrigado pela sua mensagem! Entraremos em contato em breve.</p>
-            </div>
-        </div>
 
-        <!-- Formulário de Contato -->
-        <section class="contact-form" id="contato">
-            <h2>Contato</h2>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+        <!-- Certificados -->
+        <section class="discography" id="certificados">
+            <h2 class="discography-title">Formação Academica</h2>
+            <div class="albums-container">
+                <div class="album">
+                    <img src="img/unicesumar.jpeg" alt="Certificado 1">
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <p>Unicesumar</p>
+                    <p>2021-2024</p>
+                </div>
+                <div class="album">
+                    <img src="img/Univassouras.png" alt="Certificado 2">
+                    <h3>Engenharia de <br>Software</h3>
+                    <p>Universidade de Vassouras</p>
+                    <p>2024-</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="skills" id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li><img src="img/javascript.png" alt="JavaScript Icon"> JavaScript</li>
+                <li><img src="img/html.png" alt="HTML/CSS Icon"> HTML</li>
+                <li><img src="img/css.png" alt="CSS Icon"> CSS</li>
+                <li><img src="img/react.png" alt="React Icon"> React</li>
+                <li><img src="img/node.png" alt="Node.js Icon"> Node.js</li>
+                <li><img src="img/sql.png" alt="SQL Icon"> SQL</li>
+                <li><img src="img/c.png" alt="C Icon"> C</li>
+                <li><img src="img/java.png" alt="Java Icon"> Java</li>
+                <li><img src="img/ejs.png" alt="EJS Icon"> EJS</li>
+                <li><img src="img/ingles.png" alt="Inglês Icon"> Inglês</li>
+                <li><img src="img/figma.png" alt="Figma Icon"> Figma</li>
+                <li><img src="img/office.png" alt="Pacote Office Icon"> Pacote Office</li>
+            </ul>
         </section>
     </div>
 
     <!-- Rodapé -->
     <footer>
         <p>Me siga nas redes sociais</p>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
+        <a href="https://www.instagram.com/ramonsilvaribeiro/">Instagram</a>
+        <a href="https://github.com/RamonSRibeiro">Github</a>
+        <a href="https://www.linkedin.com/in/ramon-ribeiro2002/">LinkedIn</a>
         <p>&copy; 2024 Ramon Ribeiro. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Selecionar o formulário, o modal e o botão de fechar
-        const form = document.getElementById('contactForm');
-        const modal = document.getElementById('confirmationModal');
-        const closeButton = document.querySelector('.close-button');
-
-        // Função para abrir o modal
-        function openModal() {
-            modal.style.display = 'flex';
-        }
-
-        // Função para fechar o modal
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-
-        // Evento de envio do formulário
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Impedir o envio do formulário
-
-            // Mostrar o modal
-            openModal();
-
-            // Limpar os campos do formulário
-            form.reset();
-        });
-
-        // Fechar o modal ao clicar no botão de fechar
-        closeButton.addEventListener('click', closeModal);
-
-        // Fechar o modal se clicar fora do conteúdo
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                closeModal();
-            }
-        });
-    </script>
 </body>
 </html>
