@@ -1,41 +1,46 @@
-// Seleciona o formulário e o modal
-const form = document.querySelector('form');
-const modal = document.createElement('div');
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
 
-// Configura o conteúdo do modal
-modal.innerHTML = `
-  <div class="modal-overlay">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <h2>Confirmação</h2>
-      <p>Seu formulário foi enviado com sucesso!</p>
-    </div>
-  </div>
-`;
+    if (form) {
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); 
+          
+            formStatus.classList.add('hidden');
+            formStatus.textContent = '';
+            
+            const data = new FormData(event.target);
+            
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
 
-// Adiciona o modal ao corpo do documento
-document.body.appendChild(modal);
-
-// Seleciona o botão de fechar no modal
-const closeModal = modal.querySelector('.close-modal');
-
-// Adiciona o evento de clique no botão de fechar
-closeModal.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-// Adiciona o evento de clique fora do modal para fechá-lo
-modal.querySelector('.modal-overlay').addEventListener('click', (event) => {
-  if (event.target === modal.querySelector('.modal-overlay')) {
-    modal.style.display = 'none';
-  }
-});
-
-// Esconde o modal inicialmente
-modal.style.display = 'none';
-
-// Adiciona o evento de envio do formulário
-form.addEventListener('submit', (event) => {
-  event.preventDefault(); // Impede o envio real do formulário
-  modal.style.display = 'flex'; // Mostra o modal de confirmação
+                if (response.ok) {
+                    //Exibe a notificação de sucesso
+                    formStatus.textContent = '✅ Mensagem enviada com sucesso! Em breve, entrarei em contato.';
+                    formStatus.classList.remove('hidden', 'error');
+                    formStatus.classList.add('success');
+                    form.reset(); // Limpa o formulário
+                } else {
+                    const responseData = await response.json();
+                    let errorMessage = responseData.error || 'Oops! Ocorreu um erro ao enviar sua mensagem.';
+                    
+                    //Exibe a notificação de erro
+                    formStatus.textContent = `❌ Erro: ${errorMessage}`;
+                    formStatus.classList.remove('hidden', 'success');
+                    formStatus.classList.add('error');
+                }
+            } catch (error) {
+                //Exibe a notificação de erro
+                formStatus.textContent = '❌ Falha na conexão. Por favor, tente novamente mais tarde.';
+                formStatus.classList.remove('hidden', 'success');
+                formStatus.classList.add('error');
+            }
+        });
+    }
 });
